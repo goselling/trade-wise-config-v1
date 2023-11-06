@@ -1,0 +1,51 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://8.222.225.41:1688/category_db
+    username: '{cipher}f8e150ceb01dcc619ff1b0cbbfe1fdbe50a4eaead23731105cbbf1ea755d738d'
+    password: '{cipher}5ac7ea83ec3883c9c3f0afdad7ac8ceb0cfe11bf65f97e418bf7c6568c5b71e4'
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+#         https
+          issuer-uri: https://keycloak.trade-wise.store/auth/realms/go-selling-api
+          jwk-set-uri: https://keycloak.trade-wise.store/auth/realms/go-selling-api/protocol/openid-connect/certs
+#          local
+#          issuer-uri: http://localhost:1234/auth/realms/go-selling-api
+#          jwk-set-uri: http://localhost:1234/auth/realms/go-selling-api/protocol/openid-connect/certs
+eureka:
+  client:
+    serviceUrl:
+      # defaultZone: http://localhost:8761/eureka
+      defaultZone: http://8.222.225.41:8761/eureka
+keycloak:
+  realm: go-selling-api
+  resource: go-selling
+  auth-server-url: https://keycloak.trade-wise.store/auth
+  credentials:
+    username: 'tradewise'
+    password: 'tradewise321'
+    client-id: '{cipher}68cb01c2cb6cc09d52d307bb77df71dd6ea99df0449c664e7031b6cbb6529055'
+    secret: '{cipher}42d5f710c20655adbeeb9e9eb6d161d048664f4a9e749ede11e2cefa937299e79dc63978e0e88f6eb32a730d84c50413514e4df55f056586a6813b2b647d445a'
+    provider: secret
+openapi:
+  service:
+    title: category-service
+    version: 1.0.0
+    # url: http://localhost:8080
+    url: http://8.222.225.41:8080
+
+springdoc:
+  api-docs:
+    path: /category-service/v3/api-docs
+  swagger-ui:
+    oauth:
+      realm: 'go-selling-api'
+      client-id: '{cipher}68cb01c2cb6cc09d52d307bb77df71dd6ea99df0449c664e7031b6cbb6529055'
+      clientSecret: '{cipher}42d5f710c20655adbeeb9e9eb6d161d048664f4a9e749ede11e2cefa937299e79dc63978e0e88f6eb32a730d84c50413514e4df55f056586a6813b2b647d445a'
+    path: /category-service/swagger-ui.html

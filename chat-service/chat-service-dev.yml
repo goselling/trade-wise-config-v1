@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://8.222.225.41:1688/chat_db
+    username: '{cipher}f8e150ceb01dcc619ff1b0cbbfe1fdbe50a4eaead23731105cbbf1ea755d738d'
+    password: '{cipher}5ac7ea83ec3883c9c3f0afdad7ac8ceb0cfe11bf65f97e418bf7c6568c5b71e4'
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #         https
+          issuer-uri: https://keycloak.trade-wise.store/auth/realms/go-selling-api
+          jwk-set-uri: https://keycloak.trade-wise.store/auth/realms/go-selling-api/protocol/openid-connect/certs
+#          local
+#          issuer-uri: http://localhost:1234/auth/realms/go-selling-api
+#          jwk-set-uri: http://localhost:1234/auth/realms/go-selling-api/protocol/openid-connect/certs
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://8.222.225.41:8761/eureka
+openapi:
+  service:
+    title: chat-service
+    version: 1.0.0
+    url: http://8.222.225.41:8080
+
+springdoc:
+  api-docs:
+    path: /chat-service/v3/api-docs
+  swagger-ui:
+    path: /chat-service/swagger-ui.html
