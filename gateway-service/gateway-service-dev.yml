@@ -1,11 +1,11 @@
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
+# spring:
+#   security:
+#     oauth2:
+#       resourceserver:
+#         jwt:
           #         https
-          issuer-uri: https://keycloak.trade-wise.store/auth/realms/go-selling-api
-          jwk-set-uri: https://keycloak.trade-wise.store/auth/realms/go-selling-api/protocol/openid-connect/certs
+          # issuer-uri: https://keycloak.trade-wise.store/auth/realms/go-selling-api
+          # jwk-set-uri: https://keycloak.trade-wise.store/auth/realms/go-selling-api/protocol/openid-connect/certs
 #          local
 #          issuer-uri: http://localhost:1234/auth/realms/go-selling-api
 #          jwk-set-uri: http://localhost:1234/auth/realms/go-selling-api/protocol/openid-connect/certs
