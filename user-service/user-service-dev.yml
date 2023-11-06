@@ -34,7 +34,7 @@ eureka:
 keycloak:
   realm: go-selling-api
   resource: go-selling
-  auth-server-url: http://8.222.225.41:1234/auth
+  auth-server-url: https://keycloak.trade-wise.store/auth
   credentials:
     username: 'tradewise'
     password: 'tradewise321'
