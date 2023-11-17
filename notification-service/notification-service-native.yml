@@ -1,1 +1,6 @@
-
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://8.222.225.41:1002/notification_db
+    username: '{cipher}9ee72c41a3af42c553db80463b42a999108d3fb73b336a86b2453a26355f4245'
+    password: '{cipher}20c8f92022778e0827f1514d2042e55afde235d80dc656cd70819016661e75c5'
