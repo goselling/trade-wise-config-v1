@@ -29,6 +29,8 @@ eureka:
           name: User Service
         - url: /category-service/v3/api-docs
           name: Category Service
+        - url: /notification-service/v3/api-docs
+          name: Notification Service          
         - url: /chat-service/v3/api-docs
           name: Chat Service
         - url: /post-service/v3/api-docs
