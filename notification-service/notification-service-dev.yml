@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://8.222.225.41:1001/notification_db
-    username: '{cipher}9ee72c41a3af42c553db80463b42a999108d3fb73b336a86b2453a26355f4245'
-    password: '{cipher}20c8f92022778e0827f1514d2042e55afde235d80dc656cd70819016661e75c5'
+    url: jdbc:postgresql://8.222.225.41:1688/notification_db
+    username: '{cipher}f8e150ceb01dcc619ff1b0cbbfe1fdbe50a4eaead23731105cbbf1ea755d738d'
+    password: '{cipher}5ac7ea83ec3883c9c3f0afdad7ac8ceb0cfe11bf65f97e418bf7c6568c5b71e4'
   jpa:
     hibernate:
       ddl-auto: update
